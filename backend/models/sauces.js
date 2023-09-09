@@ -27,13 +27,13 @@ const sanitizerPlugin = require("mongoose-sanitizer-plugin")
 var name_validator = [ 
     validate({
         validator: "isLength",
-        arguments: [3, 50], 
-        message: "Le nom de votre sauce doit contenir entre 3 and 50 caractères",
+        arguments: /^[^0-9]/i,
+        message: "Vous ne pouvez pas utiliser que des chiffres",
     }),
     validate({
         validator: "matches",
-        arguments: /^[a-z\d\-_\s]+$/i,
-        message: " le nom  doit contenir que des chiffres et des lettres",
+        arguments: /^[^0-9]/i,
+        message: "Vous ne pouvez pas utiliser que des chiffres",
     }) 
 ]
 
@@ -42,13 +42,13 @@ var name_validator = [
 var manufacturer_validator =[
     validate({
         validator: "isLength",
-        arguments: [3, 50],
-        message: "Le nom du \"manufacturer\" doit contenir entre 3 et 50 caractères",
+        arguments: /^[^0-9]/i,
+        message: "Vous ne pouvez pas utiliser que des chiffres",
     }),
     validate({
         validator: "matches",
-        arguments: /^[a-z\d\-_\s.@]+$/i,
-        message: " le nom  de fabricant doit contenir que des chiffres,des lettres et les caractères .@",
+        arguments: /^[^0-9]/i,
+        message: "Vous ne pouvez pas utiliser que des chiffres",
     })    
 ]
 
@@ -62,8 +62,8 @@ var description_validator =[
     }),
     validate({
         validator: "matches",
-        arguments: /^[a-z\d\-_\s.,:;*\\]+$/i,
-        message: "Vous ne pouvez utiliser que des chiffres et des lettres et quelques caratères comme .,:;*pour la description de la sauce",
+        arguments: /^[^0-9]/i,
+        message: "Vous ne pouvez pas utiliser que des chiffres",
     }),
 ]
 
@@ -77,8 +77,8 @@ var mainPepper_Validator = [
     }),
     validate({
         validator: "matches",
-        arguments: /^[a-z\d\-_\s.,:;*\\]+$/i,
-        message: "Vous ne pouvez utiliser que des chiffres et des lettres et quelques caratères comme .,:;*pour le champ ingrédients",
+        arguments: /^[^0-9]/i,
+        message: "Vous ne pouvez pas utiliser que des chiffres",
     }),
 ]
 
