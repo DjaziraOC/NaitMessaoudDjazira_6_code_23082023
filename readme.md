@@ -82,4 +82,4 @@ sécurisé
 - [x] Le code a été versionné sur Git et déployé sur GitHub à l'addresse suivante:[https://github.com/DjaziraOC/NaitMessaoudDjazira_6_code_23082023](https://github.com/DjaziraOC/NaitMessaoudDjazira_6_code_23082023)
 
 ## Evaluation
--> Projet à valider
+-> Projet validé
